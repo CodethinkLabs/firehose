@@ -1,0 +1,22 @@
+name: linux
+kind: firehose
+description: |
+  This is an example for tracking Linux kernel tags.  We attempt to follow any
+  tag which happens to be made and then we update the chunk listed in the
+  x86_64 BSP.
+
+landing:
+  repo: baserock:baserock/definitions
+  ref: baserock/firehose
+  stratum: bsp-x86_64-generic
+  chunk: linux-x86-64-generic
+  method: absolute-sha1
+
+tracking:
+  mode: refs
+  filters:
+    - ^refs/tags/
+  # Turn vX.Y-rcZ into vX.Y~rcZ so that versions can be ordered
+  transforms:
+    - match: (.*)-rc(.*)
+      replacement: $1~rc$2

@@ -1,0 +1,23 @@
+name: vim
+kind: firehose
+description: |
+  This is an example for tracking ViM tags.  We attempt to follow any
+  tag which happens to be made and then we update the chunk listed in the
+  tools stratum.
+
+landing:
+  repo: baserock:baserock/definitions
+  ref: baserock/firehose
+  stratum: tools
+  chunk: vim
+  method: absolute-sha1
+
+tracking:
+  mode: refs
+  filters:
+    - ^refs/tags/v[0-9]-[0-9]
+  # Turns vX-YaZ into vX-Y~aZ so that tags can be usefully ordered
+  transforms:
+    - match: v([0-9]-[0-9])([^-].*)
+      replacement: $1~$2
+

@@ -1,0 +1,18 @@
+name: screen
+kind: firehose
+description: |
+  This example is for tracking Screen's master branch.  This is because
+  the screen project doesn't seem to tag releases in their repo.
+
+landing:
+  repo: baserock:baserock/definitions
+  ref: baserock/firehose
+  stratum: tools
+  chunk: screen
+  method: absolute-sha1
+
+tracking:
+  mode: follow-tip
+  ref: refs/heads/master
+
+
