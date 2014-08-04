@@ -1,0 +1,11 @@
+Firehose
+========
+
+*TODO*: Explain Firehose
+
+
+Debian Version Comparison
+=========================
+
+The `debian/` directory contains a subset of the `python-debian` module which
+is under the GPL and has its authors listed in the files themselves.
