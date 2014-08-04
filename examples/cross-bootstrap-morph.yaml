@@ -9,7 +9,8 @@ description: |
 
 landing:
   repo: baserock:baserock/definitions
-  ref: baserock/firehose
+  base-ref: master
+  my-ref: baserock/firehose
   stratum: cross-bootstrap
   chunk: morph
   method: absolute-sha1

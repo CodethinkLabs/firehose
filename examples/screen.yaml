@@ -6,7 +6,8 @@ description: |
 
 landing:
   repo: baserock:baserock/definitions
-  ref: baserock/firehose
+  base-ref: master
+  my-ref: baserock/firehose
   stratum: tools
   chunk: screen
   method: absolute-sha1
