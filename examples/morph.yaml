@@ -1,0 +1,18 @@
+name: morph
+kind: firehose
+description: |
+  This example is for tracking Morph's master branch.  This way we no longer
+  need to track morph manually for definitions.
+
+landing:
+  repo: baserock:baserock/definitions
+  ref: baserock/firehose
+  stratum: tools
+  chunk: morph
+  method: absolute-sha1
+
+tracking:
+  mode: follow-tip
+  ref: refs/heads/master
+
+

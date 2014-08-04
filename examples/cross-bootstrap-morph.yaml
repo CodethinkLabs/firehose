@@ -1,0 +1,21 @@
+name: morph
+kind: firehose
+description: |
+  This example is for tracking Morph's master branch.  This way we no longer
+  need to track morph manually for definitions.  This entry updates the morph
+  present in the cross-bootstrap.morph -- deliberately different so that we
+  can see if changes work for normal builds but not cross-bootstrap or
+  vice-versa.
+
+landing:
+  repo: baserock:baserock/definitions
+  ref: baserock/firehose
+  stratum: cross-bootstrap
+  chunk: morph
+  method: absolute-sha1
+
+tracking:
+  mode: follow-tip
+  ref: refs/heads/master
+
+
