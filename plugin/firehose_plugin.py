@@ -86,7 +86,7 @@ class FirehosePlugin(cliapp.Plugin):
             for c in confs:
                 self.update_for_conf(c)
             if self.updated_morphologies():
-                print self.app.runcmd_unchecked(["git", "diff"], cwd=self.gitpath)[1]
+                self.commit_and_push()
 
     def make_path(self, *subpath):
         return os.path.join(self.base_path, *subpath)
@@ -229,3 +229,12 @@ class FirehosePlugin(cliapp.Plugin):
                 morph.dirty = False
         
         return True
+
+    def commit_and_push(self):
+        (code, out, err) = self.app.runcmd_unchecked(
+            ['git', 'commit', '-a', '-m', 'Firehose test commit'],
+            cwd=self.gitpath)
+        if code == 0:
+            self.app.runcmd(['git', 'push', 'origin', 'HEAD'],
+                            cwd=self.gitpath)
+

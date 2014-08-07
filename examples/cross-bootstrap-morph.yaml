@@ -9,8 +9,8 @@ description: |
 
 landing:
   repo: baserock:baserock/definitions
-  baseref: master
-  myref: baserock/firehose
+  baseref: ct-mcr-1/danielsilverstone/firehose-test-baseline
+  myref: ct-mcr-1/danielsilverstone/firehose-test-1
   stratum: cross-bootstrap
   chunk: morph
   method: absolute-sha1
