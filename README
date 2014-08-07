@@ -1,7 +1,18 @@
 Firehose
 ========
 
-*TODO*: Explain Firehose
+Firehose is a tool which reads yaml files (see the `examples/` directory) which
+instruct the tool in how to perform integrations of upstream changes into a
+Baserock definitions set.  It is meant to be used in conjunction with the
+Baserock CD pipeline (Mason) to reduce the cognitive load on the systems
+integration role, freeing brain cycles for more constructive development work.
+
+Currently Firehose is limited to applying all of its inputs in a single
+integration and it only supports the absolute-sha landing method (which assumes
+a zero delta between upstream and what we need for Baserock) but for anything
+where that holds true, Firehose can provide a valuable service pre-integrating
+and running those integrations through a CD pipeline to gain confidence in the
+proposed change.
 
 
 Debian Version Comparison
