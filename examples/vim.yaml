@@ -7,8 +7,8 @@ description: |
 
 landing:
   repo: baserock:baserock/definitions
-  base-ref: master
-  my-ref: baserock/firehose
+  baseref: master
+  myref: baserock/firehose
   stratum: tools
   chunk: vim
   method: absolute-sha1
@@ -20,5 +20,5 @@ tracking:
   # Turns vX-YaZ into vX-Y~aZ so that tags can be usefully ordered
   transforms:
     - match: v([0-9]-[0-9])([^-].*)
-      replacement: $1~$2
+      replacement: \1~\2
 

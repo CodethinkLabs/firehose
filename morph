@@ -1,0 +1,17 @@
+#!/bin/sh
+
+MORPH="${MORPH:-$(which morph)}"
+
+BASE="$(dirname $0)"
+BASE="${BASE:-.}"
+BASE="$(realpath ${BASE})"
+
+MORPH_PLUGIN_PATH="${BASE}/plugin"
+
+export MORPH_PLUGIN_PATH
+
+PYTHONPATH="${BASE}${PYTHONPATH:+:${PYTHONPATH}}:"
+
+export PYTHONPATH
+
+exec ${MORPH} "$@"

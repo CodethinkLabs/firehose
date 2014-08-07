@@ -6,8 +6,8 @@ description: |
 
 landing:
   repo: baserock:baserock/definitions
-  base-ref: master
-  my-ref: baserock/firehose
+  baseref: master
+  myref: baserock/firehose
   stratum: bsp-x86_64-generic
   chunk: linux-x86-64-generic
   method: absolute-sha1
