@@ -9,7 +9,7 @@ description: |
 
 landing:
   repo: baserock:baserock/definitions
-  baseref: ct-mcr-1/danielsilverstone/firehose-test-baseline
+  baseref: master
   myref: ct-mcr-1/danielsilverstone/firehose-test-1
   stratum: cross-bootstrap
   chunk: morph

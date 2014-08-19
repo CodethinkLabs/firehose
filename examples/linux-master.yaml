@@ -6,7 +6,7 @@ description: |
 
 landing:
   repo: baserock:baserock/definitions
-  baseref: ct-mcr-1/danielsilverstone/firehose-test-baseline
+  baseref: master
   myref: ct-mcr-1/danielsilverstone/firehose-test-1
   stratum: bsp-x86_64-generic
   chunk: linux-x86-64-generic
